@@ -1501,8 +1501,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "admin":
         buttons = [[
-            InlineKeyboardButton('🍁𝐁𝐚𝐜𝐤🎋', callback_data='help')
-            
+            InlineKeyboardButton('🍁𝐁𝐚𝐜𝐤🎋', callback_data='help'),
+            InlineKeyboardButton('🕸𝐄𝐱𝐭𝐫𝐚💶', callback_data='extra')
         ]]
         await client.edit_message_media(
             query.message.chat.id, 
@@ -1636,7 +1636,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             )
     elif query.data == "tele":
             btn = [[
-                    InlineKeyboardButton("🎋𝐁𝐚𝐜𝐤🍁", callback_data="🎋𝐁𝐚𝐜𝐤🍁"),
+                    InlineKeyboardButton("🎋𝐁𝐚𝐜𝐤🍁", callback_data="about"),
                     InlineKeyboardButton("🍁𝐂𝐨𝐧𝐭𝐚𝐜𝐭🌲", url="telegram.me/SMD_Owner")
                   ]]
             await client.edit_message_media(
