@@ -1534,27 +1534,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
     
     elif query.data == "extra":
         buttons = [[
-            InlineKeyboardButton('⚙ 𝐀𝐝𝐦𝐢𝐧 𝐎𝐧𝐥𝐲​ ⚙', callback_data='admin')
-        ],[
-            InlineKeyboardButton('🎋𝐁𝐚𝐜𝐤🍁', callback_data='help')
+            InlineKeyboardButton('🍁𝐁𝐚𝐜𝐤🎋', callback_data='admin')
         ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text="● ◌ ◌"
-        )
-        await query.message.edit_text(
-            text="● ● ◌"
-        )
-        await query.message.edit_text(
-            text="● ● ●"
-        )
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
             InputMediaPhoto(random.choice(PICS))
         )
+        reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
-            text=script.EXTRAMOD_TXT,
+            text=script.EXTRA_TXT,
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
@@ -1620,7 +1609,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton("🍁తెలుగ🍁", callback_data="telugu_info"),
             InlineKeyboardButton("🍁ಕನ್ನಡ🍁", callback_data="kannada_info"),
             InlineKeyboardButton("🍁ગુજરાતી🍁", callback_data="gujarati_info"),
-            InlineKeyboardButton("🌿𝐁𝐚𝐜𝐤💥", callback_data="help")
+            InlineKeyboardButton("🌿𝐁𝐚𝐜𝐤💥", callback_data="start")
 
             ]]
             await client.edit_message_media(
