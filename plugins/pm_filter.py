@@ -1407,7 +1407,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🍁𝐁𝐚𝐜𝐤🎋', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await client.edit_message_media(
+        await message.reply_sticker("CAACAgUAAxkBAAEKVaxlCWGs1Ri6ti45xliLiUeweCnu4AACBAADwSQxMYnlHW4Ls8gQMAQ") ,(
             query.message.chat.id, 
             query.message.id, 
             InputMediaPhoto(random.choice(PICS))
@@ -1502,7 +1502,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "admin":
         buttons = [[
             InlineKeyboardButton('🍁𝐁𝐚𝐜𝐤🎋', callback_data='help'),
-            InlineKeyboardButton('🕸𝐄𝐱𝐭𝐫𝐚💶', callback_data='extra')
         ]]
         await client.edit_message_media(
             query.message.chat.id, 
