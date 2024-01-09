@@ -1407,10 +1407,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🍁𝐁𝐚𝐜𝐤🎋', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await client.edit_message_media(
-            query.message.chat.id, 
-            query.message.id, 
-            InputMediaPhoto(random.choice(PICS))
+        m=await message.reply_sticker("CAACAgUAAxkBAAEBE9NlnW_99bth-pKCUp7xpRuA_x3dbQACjQgAAlRUgVTJ8HhzKcWHyh4E") 
+        await asyncio.sleep(1)
+        await m.delete()
+        await message.reply_photo(
+            photo=random.choice(PICS))
         )
         await query.message.edit_text(
             text=script.SOURCE_TXT,
